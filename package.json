@@ -1,0 +1,30 @@
+{
+  "name": "moviesnotesapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuka7abr/MoviesNotesAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuka7abr/MoviesNotesAPI/issues"
+  },
+  "homepage": "https://github.com/samuka7abr/MoviesNotesAPI#readme",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
