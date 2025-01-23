@@ -71,7 +71,7 @@ class UsersController {
       [user.name, user.email, user.password, id]
     )
 
-    return response.json()
+    return response.json("Usuário atualizado com sucesso!")
   }
 }
 
