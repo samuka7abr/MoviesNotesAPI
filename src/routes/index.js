@@ -12,5 +12,4 @@ routes.use('/moovies', mooviesRoutes);
 routes.use('/users', usersRoutes);
 routes.use('/tags', tagsRoutes);
 
-
 module.exports = routes;
