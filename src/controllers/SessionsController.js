@@ -4,7 +4,7 @@ const { sign }  = require("jsonwebtoken");
 const knex = require('../database/knex');
 const { compare } = require('bcryptjs');
 
-class SessionsConrtoller {
+class SessionsController {
     async create(request, response){
         const { email, password } = request.body;
 
@@ -32,4 +32,4 @@ class SessionsConrtoller {
     }
 }
 
-module.exports = SessionsConrtoller;
+module.exports = SessionsController;
