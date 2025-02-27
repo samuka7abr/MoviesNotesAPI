@@ -3,8 +3,8 @@ const AppError = require('../utils/AppError');
 
 class MooviesController{
     async create(request, response){
-        const { title, description, rating, tags} = request.body;
-        const { user_id } = request.params;
+        const { title, description, rating, tags, user_id} = request.body;
+
 
         const [moovie_id] = await knex("moovies_notes").insert({
             title, 
@@ -14,11 +14,11 @@ class MooviesController{
         })
 
         if (!title || !rating || !tags){
-            throw new AppError("Todos os campos são obrigatórios!")
+            throw new AppError("Todos os campos são obrigatórios!", 400)
         }
 
         if(rating < 0 || rating > 10){
-            throw new AppError("A avaliação do filme deve ser entre 0 e 10")
+            throw new AppError("A avaliação do filme deve ser entre 0 e 10", 400)
         }
 
         const tagsInsert = tags.map(name => {

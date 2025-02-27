@@ -6,7 +6,7 @@ const mooviesRoutes = Router();
 
 const mooviesController = new MooviesController;
 
-mooviesRoutes.post('/:user_id', mooviesController.create);
+mooviesRoutes.post('/', mooviesController.create);
 mooviesRoutes.get('/:id', mooviesController.show);
 mooviesRoutes.delete('/:id', mooviesController.delete);
 mooviesRoutes.get('/', mooviesController.index);
